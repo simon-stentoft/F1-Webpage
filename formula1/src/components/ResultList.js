@@ -20,7 +20,7 @@ function ResultList() {
         <h3 className="text-center">
           {nameOfRace.raceName}
         </h3>
-       <table className="table table-striped">
+       <table className="table table-striped text-center">
         <thead>
           <tr>
             <th>Position</th>

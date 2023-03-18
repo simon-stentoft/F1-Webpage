@@ -15,7 +15,7 @@ function RaceSchedule() {
   
     return (
       <div className="container">
-       <table className="table table-striped">
+       <table className="table table-striped text-center">
         <thead>
           <tr>
             <th>Season</th>
@@ -25,6 +25,7 @@ function RaceSchedule() {
             <th>Time</th>
             <th>Sprint</th>
             <th>Circuit</th>
+            <th>Race ended</th>
           </tr>
         </thead>
         <tbody className="table-group-divider">
@@ -37,6 +38,7 @@ function RaceSchedule() {
               <td>{race.time}</td>
               <td>{race.Sprint?.date || ' - '}</td>
               <td>{race.Circuit.circuitName}</td>
+              <td>{new Date(race.date) < new Date() ? '✔' : ''}</td>
             </tr>
           ))}
         </tbody>
