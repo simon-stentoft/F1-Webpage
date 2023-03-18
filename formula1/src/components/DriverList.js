@@ -11,7 +11,8 @@ const DriverList = () => {
         
     } else {
         return (
-            <table>
+          <div className="container">
+            <table className="table table-striped">
             <thead>
               <tr>
                 <th>Given Name</th>
@@ -20,7 +21,7 @@ const DriverList = () => {
                 <th>Nationality</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="table-group-divider">
               {data?.MRData?.DriverTable?.Drivers.map((driver) => (
                 <tr key={driver.driverId}>
                   <td>{driver.givenName}</td>
@@ -31,6 +32,7 @@ const DriverList = () => {
               ))}
             </tbody>
           </table>
+          </div>
         )
     }
 }

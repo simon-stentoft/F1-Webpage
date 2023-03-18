@@ -11,10 +11,16 @@ function ResultList() {
       return <div>Error: {error.message}</div>;
     }
   
+    const nameOfRace = data.MRData.RaceTable.Races[0];
     const raceResults = data.MRData.RaceTable.Races[0].Results;
   
     return (
-      <table>
+      <div className="container">
+        <br/>
+        <h3 className="text-center">
+          {nameOfRace.raceName}
+        </h3>
+       <table className="table table-striped">
         <thead>
           <tr>
             <th>Position</th>
@@ -28,7 +34,7 @@ function ResultList() {
             <th>Points</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="table-group-divider">
           {raceResults.map((result) => (
             <tr key={result.position}>
               <td>{result.position}</td>
@@ -43,7 +49,8 @@ function ResultList() {
             </tr>
           ))}
         </tbody>
-      </table>
+        </table>
+      </div>
     );
   }
 export default ResultList;

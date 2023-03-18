@@ -10,7 +10,7 @@ const ergastAPI = createApi({
       fetchDriver: builder.query({
         query: () => {
           return {
-            url: '2022/drivers.json',
+            url: '2023/drivers.json',
             method: 'GET',
           };
         },

@@ -19,13 +19,14 @@ function App() {
   return (
     <div>
       <div>
-        <div className="navbar">
-          <nav className="nav navbar">
-            <Link to='/' className="nav-item nav-link">Home</Link>
-            <Link to='/driverlist' className="nav-item nav-link">Driver list</Link>
-            <Link to='/recentresultlist' className="nav-item nav-link">Most recent race results</Link>
-          </nav>
-        </div>
+        <nav className="navbar text-bg-dark">
+           <div className="container">
+            <a href='#' className='navbar-brand text-bg-dark'>Formula1</a>
+             <Link to='/' className="nav-item nav-link active" aria-current="page">Home</Link>
+             <Link to='/driverlist' className="nav-item nav-link active" aria-current="page">Driver list</Link>
+             <Link to='/recentresultlist' className="nav-item nav-link active" aria-current="page">Most recent race results</Link>
+           </div>
+        </nav>
       </div>
       <Routes>
         <Route path='/' element={<Home/>}/>
