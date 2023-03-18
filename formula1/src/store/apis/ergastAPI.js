@@ -23,9 +23,17 @@ const ergastAPI = createApi({
           };
         }
       }),
+      fetchRaceSchedule: builder.query({
+        query: () => {
+          return {
+            url: 'current.json', //Current season race schedule
+            method: 'GET',
+          };
+        }
+      }),
     };
   },
 });
 
-export const {useFetchDriverQuery, useFetchResultQuery} = ergastAPI;
+export const {useFetchDriverQuery, useFetchResultQuery, useFetchRaceScheduleQuery} = ergastAPI;
 export { ergastAPI };

@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import DriverList from "./components/DriverList";
 import ResultList from "./components/ResultList";
 import Home from "./components/Home";
+import RaceSchedule from './components/RaceSchedule';
 
 /*function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
              <Link to='/' className="nav-item nav-link active" aria-current="page">Home</Link>
              <Link to='/driverlist' className="nav-item nav-link active" aria-current="page">Driver list</Link>
              <Link to='/recentresultlist' className="nav-item nav-link active" aria-current="page">Most recent race results</Link>
+             <Link to='/raceschedule' className="nav-item nav-link active" aria-current="page">Current season race schedule</Link>
            </div>
         </nav>
       </div>
@@ -32,6 +34,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/driverlist' element={<DriverList/>}/>
         <Route path='/recentresultlist' element={<ResultList/>}/>
+        <Route path='/raceschedule' element={<RaceSchedule/>}/>
       </Routes>
     </div>
   )
