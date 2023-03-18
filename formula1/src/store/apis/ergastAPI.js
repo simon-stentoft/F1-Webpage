@@ -31,9 +31,17 @@ const ergastAPI = createApi({
           };
         }
       }),
+      fetchDriverStandings: builder.query({
+        query: () => {
+          return {
+            url: 'current/driverStandings.json', //Current season driver standings
+            method: 'GET',
+          };
+        }
+      }),
     };
   },
 });
 
-export const {useFetchDriverQuery, useFetchResultQuery, useFetchRaceScheduleQuery} = ergastAPI;
+export const {useFetchDriverQuery, useFetchResultQuery, useFetchRaceScheduleQuery, useFetchDriverStandingsQuery} = ergastAPI;
 export { ergastAPI };

@@ -4,7 +4,7 @@ function ResultList() {
     const { data, error, isLoading } = useFetchResultQuery();
   
     if (isLoading) {
-      return <div>Loading..</div>;
+      return <div><h2 className="text-center">Loading..</h2></div>;
     }
   
     if (error) {
