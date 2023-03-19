@@ -36,6 +36,7 @@ const DriverList = () => {
           <tr>
             <th onClick={() => handleSort("givenName")}>Given Name</th>
             <th onClick={() => handleSort("familyName")}>Family Name</th>
+            <th onClick={() => handleSort("code")}>Code</th>
             <th onClick={() => handleSort("dateOfBirth")}>Date of Birth</th>
             <th onClick={() => handleSort("nationality")}>Nationality</th>
           </tr>
@@ -45,6 +46,7 @@ const DriverList = () => {
             <tr key={driver.driverId}>
               <td>{driver.givenName}</td>
               <td>{driver.familyName}</td>
+              <td>{driver.code}</td>
               <td>{driver.dateOfBirth}</td>
               <td>{driver.nationality}</td>
             </tr>

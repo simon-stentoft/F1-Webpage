@@ -12,9 +12,14 @@ function DriverStandings() {
     }
   
     const driverStandings = data?.MRData?.StandingsTable?.StandingsLists?.[0].DriverStandings;
+    const driverStandingsSeason = data?.MRData?.StandingsTable;
   
     return (
       <div className="container">
+        <br/>
+        <h3 className="text-center">
+          Season: {driverStandingsSeason.season}
+        </h3>
        <table className="table table-striped text-center">
         <thead>
           <tr>
