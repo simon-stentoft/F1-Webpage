@@ -39,9 +39,17 @@ const ergastAPI = createApi({
           };
         }
       }),
+      fetchFlexibleDriverStandings: builder.query({
+        query: (season) => {
+          return {
+            url: `${season}/driverStandings.json`, //Season year driver standings
+            method: 'GET',
+          };
+        }
+      }),
     };
   },
 });
 
-export const {useFetchDriverQuery, useFetchResultQuery, useFetchRaceScheduleQuery, useFetchDriverStandingsQuery} = ergastAPI;
+export const {useFetchDriverQuery, useFetchResultQuery, useFetchRaceScheduleQuery, useFetchDriverStandingsQuery, useFetchFlexibleDriverStandingsQuery} = ergastAPI;
 export { ergastAPI };

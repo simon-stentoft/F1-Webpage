@@ -13,7 +13,7 @@ function App() {
         <nav className="navbar text-bg-dark">
            <div className="container">
             <a href='/' className='navbar-brand fw-bold'>Formula1</a>
-             <Link to='/driverlist' className="nav-item nav-link active" aria-current="page">Driver list</Link>
+             <Link to='/driverlist' className="nav-item nav-link active" aria-current="page">Current season driver list</Link>
              <Link to='/recentresultlist' className="nav-item nav-link active" aria-current="page">Most recent race results</Link>
              <Link to='/raceschedule' className="nav-item nav-link active" aria-current="page">Current season race schedule</Link>
              <Link to='/driverstandings' className="nav-item nav-link active" aria-current="page">Driver standings</Link>
