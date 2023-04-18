@@ -1,0 +1,22 @@
+{
+    "drivers": [
+      {
+        "name": "Max Verstappen",
+        "constructor": "Red Bull",
+        "points": "69",
+        "wins": "2"
+      },
+      {
+        "name": "Sergio Pérez",
+        "constructor": "Red Bull",
+        "points": "54",
+        "wins": "1"
+      },
+      {
+        "name": "Fernando Alonso",
+        "constructor": "Aston Martin",
+        "points": "45",
+        "wins": "0"
+      }
+    ]
+  }

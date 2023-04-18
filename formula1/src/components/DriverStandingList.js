@@ -17,20 +17,30 @@ function DriverStandings() {
   
     const driverStandings = data?.MRData?.StandingsTable?.StandingsLists?.[0].DriverStandings;
     const driverStandingsSeason = data?.MRData?.StandingsTable;
-  
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      const formData = new FormData(event.target);
-      setSearchSeason(formData.get('season'));
+
+    //Makes a JSON file with the first three drivers in the season.
+    const firstThreeDrivers = driverStandings.slice(0, 3).map((driver) => ({
+      name: `${driver.Driver.givenName} ${driver.Driver.familyName}`,
+      constructor: driver.Constructors[0].name,
+      points: driver.points,
+      wins: driver.wins
+    }));
+    //Converts the JSON file to a string.
+    const json = JSON.stringify(firstThreeDrivers);
+    
+    //Creates a download link for the JSON file.
+    const downloadJsonFile = () => {
+      const element = document.createElement("a");
+      const file = new Blob([json], { type: "application/json" });
+      element.href = URL.createObjectURL(file);
+      element.download = "first_three_drivers.json";
+      document.body.appendChild(element);
+      element.click();
     };
 
     return (
       <div className="container">
         <br/>
-        <form onSubmit={handleSubmit} className="text-center">
-          <input type="text" name="season" placeholder="Search..."/>
-          <button type="submit">Search</button>
-      </form>
         <br/>
         <h3 className="text-center">
           Season: {driverStandingsSeason.season}
@@ -57,6 +67,9 @@ function DriverStandings() {
           ))}
         </tbody>
         </table>
+        <button onClick={downloadJsonFile} className="btn btn-primary mb-3">
+        Download JSON File
+      </button>
       </div>
     );
   }
