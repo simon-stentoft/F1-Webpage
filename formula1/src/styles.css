@@ -1,7 +1,11 @@
 .navbar-brand {
-    color: white;
+  color: white;
 }
 
 .navbar-brand:hover {
-    color: red;
-  }
+  color: red;
+}
+
+.navbar {
+  width: 100%;
+}
