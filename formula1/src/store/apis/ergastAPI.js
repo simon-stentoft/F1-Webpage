@@ -18,7 +18,7 @@ const ergastAPI = createApi({
       fetchResult: builder.query({
         query: () => {
           return {
-            url: "results/", //Most recent race results
+            url: "last/results/", //Most recent race results
             method: "GET",
           };
         },
